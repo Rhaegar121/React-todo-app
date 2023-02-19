@@ -16,6 +16,12 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
     setEditing(true);
   };
 
+  const handleUpdatedDone = (event) => {
+    if (event.key === 'Enter') {
+      setEditing(false);
+    }
+  };
+
   const completedStyle = {
     fontStyle: "italic",
     color: "#595959",
@@ -37,7 +43,7 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
         <button onClick={handleEditing}>Edit</button>
         <button onClick={() => delTodo(itemProp.id)}>Delete</button>
       </div>
-      <input type="text" value={itemProp.title} className={styles.textInput} style={editMode} onChange={(e) => setUpdate(e.target.value, itemProp.id)} />
+      <input type="text" value={itemProp.title} className={styles.textInput} style={editMode} onChange={(e) => setUpdate(e.target.value, itemProp.id)} onKeyDown={handleUpdatedDone} />
     </li>
   );
 };

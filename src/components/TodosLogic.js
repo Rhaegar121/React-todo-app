@@ -64,7 +64,6 @@ const TodosLogic = () => {
     );
   };
   
-
   return (
     <div>
       <InputTodo addTodoItem={addTodoItem} />
