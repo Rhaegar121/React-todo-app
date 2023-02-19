@@ -1,5 +1,11 @@
 const InputTodo = () => {
-    return <div>input field here...</div>;
+    return (
+      <form>
+        <input type="text" placeholder="Add Todo..." />
+        <button>Submit</button>
+      </form>
+    );
   };
   export default InputTodo;
+  
   
