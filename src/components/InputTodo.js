@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const InputTodo = ({ addTodoItem }) => {
   const [title, setTitle] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     setTitle(e.target.value);
@@ -9,11 +10,17 @@ const InputTodo = ({ addTodoItem }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodoItem(title);
-    setTitle('');
+    if (title.trim()) {
+        addTodoItem(title);
+        setTitle('');
+        setMessage('');
+      } else {
+        setMessage('Please add item.');
+      }
   };
 
   return (
+   <>
     <form onSubmit={handleSubmit}>
       <input
         type="text"
@@ -23,6 +30,8 @@ const InputTodo = ({ addTodoItem }) => {
       />
       <button>Submit</button>
     </form>
+    <span>{message}</span>
+   </>
   );
 };
 export default InputTodo;
