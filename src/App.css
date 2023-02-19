@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Segoe UI", sans-serif;
   line-height: 1.4;
@@ -12,23 +13,26 @@ body {
   font-weight: 400;
 }
 
-/*==========================
+/* ==========================
 Sidebar navigation
-========================*/
+======================== */
 .navbar {
   position: relative;
 }
+
 button {
   cursor: pointer;
-  background: transparent;;
+  background: transparent;
   border: none;
   font-size: 20px;
 }
+
 .navbar .toggle {
   position: fixed;
   left: 30px;
   top: 30px;
 }
+
 .menu-nav {
   list-style: none;
   position: absolute;
@@ -45,11 +49,14 @@ button {
   transform: translateX(-100px);
   transition: transform ease-in-out 0.2s;
 }
+
 .menu-nav.show-menu {
   width: 100%;
-  transform: translateX(0px);
+  transform: translateX(0);
 }
-.menu-nav li, .menu-nav li span {
+
+.menu-nav li,
+.menu-nav li span {
   display: block;
   padding: 0.8rem;
 }
@@ -58,18 +65,21 @@ button {
   width: 100%;
   padding: 8rem 20px 3rem;
 }
+
 .todos {
   max-width: 580px;
   margin: 0 auto;
 }
+
 .form-container {
   display: flex;
   border-radius: calc(0.1 * 100px);
-  box-shadow: 0px 4px 14px 0px rgba(70, 70, 70, 0.38);
+  box-shadow: 0 4px 14px 0 rgba(70, 70, 70, 0.38);
   justify-content: space-around;
   background: #fff;
   font-size: 1rem;
 }
+
 .input-text {
   width: 85%;
   padding-right: 5px;
@@ -77,9 +87,11 @@ button {
   border-radius: calc(0.5 * 100px);
   font-size: 1rem;
 }
+
 .input-text::placeholder {
   color: #000;
 }
+
 .input-submit {
   background: transparent;
   color: #5b5b5b;
@@ -88,21 +100,23 @@ button {
   font-weight: 600;
   margin-right: 10px;
 }
+
 .input-text,
 .input-submit {
   height: 45px;
   outline: none;
   border: none;
 }
+
 .input-submit svg {
   color: #5e5e5e;
   font-size: 20px;
   margin-top: 2px;
 }
+
 .submit-warning {
   font-size: 13px;
   color: red;
   margin-top: 5px;
   display: block;
 }
-
