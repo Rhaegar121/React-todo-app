@@ -19,6 +19,7 @@ const TodoItem = ({ itemProp, handleChange, delTodo }) => {
             <span style={itemProp.completed ? completedStyle : null}>
         {itemProp.title}
             </span>
+            <button>Edit</button>
             <button onClick={() => delTodo(itemProp.id)}>Delete</button>
             </div>
         </li>
