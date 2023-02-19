@@ -27,7 +27,7 @@ button {
 .navbar .toggle {
   position: fixed;
   left: 30px;
-  top: 40px;
+  top: 30px;
 }
 .menu-nav {
   list-style: none;
@@ -36,8 +36,9 @@ button {
   left: 30px;
   top: 70px;
   width: 0;
+  padding: 10px;
   overflow: hidden;
-  max-width: 130px;
+  max-width: 180px;
   z-index: 9;
   font-size: 18px;
   box-shadow: 0 10px 15px -3px rgb(46 41 51 / 8%), 0 4px 6px -2px rgb(71 63 79 / 16%);
@@ -48,9 +49,9 @@ button {
   width: 100%;
   transform: translateX(0px);
 }
-.menu-nav li a, .menu-nav li span {
+.menu-nav li, .menu-nav li span {
   display: block;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .wrapper {

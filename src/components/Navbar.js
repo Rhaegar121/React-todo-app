@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useOnClickOutside } from "../useOnClickOutside";
+import { MdClose } from 'react-icons/md';
+import { FiMenu } from 'react-icons/fi';
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -10,9 +12,21 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <button className="toggle" onClick={() => setNavbarOpen((prev) => !prev)}>
-        {navbarOpen ? "close" : "open"}
-      </button>
+      <button
+  className="toggle"
+  onClick={() => setNavbarOpen((prev) => !prev)}
+>
+  {navbarOpen ? (
+    <MdClose style={{ width: '32px', height: '32px' }} />
+  ) : (
+    <FiMenu
+      style={{
+        width: '32px',
+        height: '32px',
+      }}
+    />
+  )}
+</button>
       <ul className={`menu-nav${navbarOpen ? ' show-menu' : ''}`}>
         <li>Home</li>
         <li>About</li>
