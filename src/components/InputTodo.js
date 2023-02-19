@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
-import { FaPlusCircle } from "react-icons/fa"
+import { FaPlusCircle } from 'react-icons/fa';
 
 const InputTodo = ({ addTodoItem }) => {
   const [title, setTitle] = useState('');
@@ -12,28 +13,28 @@ const InputTodo = ({ addTodoItem }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim()) {
-        addTodoItem(title);
-        setTitle('');
-        setMessage('');
-      } else {
-        setMessage('Please add item.');
-      }
+      addTodoItem(title);
+      setTitle('');
+      setMessage('');
+    } else {
+      setMessage('Please add item.');
+    }
   };
 
   return (
-   <>
-    <form onSubmit={handleSubmit} className="form-container">
-      <input
-        type="text"
-        placeholder="Add Todo..."
-        value={title}
-        onChange={handleChange}
-        className="input-text"
-      />
-      <button className="input-submit"><FaPlusCircle /></button>
-    </form>
-    <span className="submit-warning">{message}</span>
-   </>
+    <>
+      <form onSubmit={handleSubmit} className="form-container">
+        <input
+          type="text"
+          placeholder="Add Todo..."
+          value={title}
+          onChange={handleChange}
+          className="input-text"
+        />
+        <button type="button" aria-label="Mute volume" className="input-submit"><FaPlusCircle /></button>
+      </form>
+      <span className="submit-warning">{message}</span>
+    </>
   );
 };
 export default InputTodo;

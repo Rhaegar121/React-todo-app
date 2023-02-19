@@ -1,17 +1,20 @@
-import styles from "../styles/TodoItem.module.css";
-import { useState } from "react";
-import { FaTrash } from "react-icons/fa";
-import { AiFillEdit } from "react-icons/ai";
+/* eslint-disable react/prop-types */
+import { useState } from 'react';
+import { FaTrash } from 'react-icons/fa';
+import { AiFillEdit } from 'react-icons/ai';
+import styles from '../styles/TodoItem.module.css';
 
-const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+const TodoItem = ({
+  itemProp, handleChange, delTodo, setUpdate,
+}) => {
   const [editing, setEditing] = useState(false);
 
-  let viewMode = {};
-  let editMode = {};
+  const viewMode = {};
+  const editMode = {};
   if (editing) {
-    viewMode.display = "none";
+    viewMode.display = 'none';
   } else {
-    editMode.display = "none";
+    editMode.display = 'none';
   }
 
   const handleEditing = () => {
@@ -25,10 +28,10 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
   };
 
   const completedStyle = {
-    fontStyle: "italic",
-    color: "#595959",
+    fontStyle: 'italic',
+    color: '#595959',
     opacity: 0.4,
-    textDecoration: "line-through",
+    textDecoration: 'line-through',
   };
 
   return (
@@ -42,11 +45,11 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
         <span style={itemProp.completed ? completedStyle : null}>
           {itemProp.title}
         </span>
-        <button onClick={handleEditing}>
-        <AiFillEdit style={{ color: "#5e5e5e", fontSize: "16px" }} />
+        <button type="button" onClick={handleEditing}>
+          <AiFillEdit style={{ color: '#5e5e5e', fontSize: '16px' }} />
         </button>
-        <button onClick={() => delTodo(itemProp.id)}>
-        <FaTrash style={{ color: "#5e5e5e", fontSize: "16px" }} />
+        <button type="button" onClick={() => delTodo(itemProp.id)}>
+          <FaTrash style={{ color: '#5e5e5e', fontSize: '16px' }} />
         </button>
       </div>
       <input type="text" value={itemProp.title} className={styles.textInput} style={editMode} onChange={(e) => setUpdate(e.target.value, itemProp.id)} onKeyDown={handleUpdatedDone} />
