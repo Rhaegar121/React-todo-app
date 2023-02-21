@@ -108,8 +108,6 @@ Use Github pages for free and secure deployment.
 
 ## 👥 Authors <a name="authors"></a>
 
-> Kaung Myat Kyaw (Barry).
-
 👤 **Kaung Myat Kyaw**
 
 - GitHub: [@githubhandle](https://github.com/Rhaegar121)
