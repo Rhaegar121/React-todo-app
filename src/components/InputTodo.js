@@ -29,7 +29,7 @@ const InputTodo = ({ addTodoItem }) => {
           placeholder="Add Todo..."
           value={title}
           onChange={handleChange}
-          className="input-text"
+          className="input-text input-field"
         />
         <button type="button" aria-label="Mute volume" className="input-submit"><FaPlusCircle /></button>
       </form>
