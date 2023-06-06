@@ -28,7 +28,7 @@ const TodosLogic = () => {
   const addTodoItem = (title) => {
     const newTodo = {
       id: uuidv4(),
-      title: title,
+      title,
       completed: false,
     };
     setTodos([...todos, newTodo]);
@@ -46,7 +46,7 @@ const TodosLogic = () => {
   };
 
   return (
-    <div>
+    <div className="todo_class">
       <InputTodo addTodoItem={addTodoItem} />
       <TodosList
         todosProps={todos}
